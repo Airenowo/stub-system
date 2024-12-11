@@ -1,0 +1,52 @@
+<html>  
+<head>  
+    <title>Digital Stubs/Badge System</title>  
+    <link rel = "stylesheet" type = "text/css" href = "style.css">   
+</head>  
+<body>  
+<img>
+<img src="NDDU Logo.png" alt="NDDU Logo" width="280" height="280"> 
+<div id="frm">
+    <h2>User Authentication</h2>
+    <form name="f1" action="authentication.php" onsubmit="return login()" method="POST">
+        <hr />
+        <p>
+            <label> Student Number:</label>
+            <input type="text" id="student_id" name="student_id" />
+        </p>
+        <p>
+            <label> Password:</label>
+            <input type="password" id="pass" name="pass" />
+        </p>
+        <p>
+            <input type="submit" id="btn" value="Login" />
+        </p>
+    </form>
+    <p>
+        <button id="btn" onclick="document.getElementById('student_id').value = '', document.getElementById('pass').value = ''">Clear entries</button>
+    </p>
+</div>    
+    <script>  
+            function login()  
+            {  
+                var id=document.f1.student_id.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("Student number and password fields are empty.");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("Student number is empty.");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty.");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+</body>     
+</html> 
